@@ -67,3 +67,40 @@ Think of a web server like a restaurant. Just as a restaurant stores food, prepa
 
 * Nodejs allows developers to use javascript programming language in server side.
 * Nodejs build upon V8 engine (Chromes Javascript engines and a `c++ library` and `libuv library`)
+
+## Q3. What is difference between nodejs and web browser environment?
+
+| Nodejs                                                                                                                             | Web Browser                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| It is mostly use on the server side                                                                                                | It is use on the client side                                                                         |
+| Nodejs does not have capability to add HTML tabs                                                                                   | Javascript is capable enough to add HTML and play with the DOM                                       |
+| Nodejs is used in server side development                                                                                          | Javascript is used in frontend developement                                                          |
+| Nodejs supports the common javascript modules (require function and module.exports)                                                | Browser javascript supports ES6 modules (import, export keyword)                                     |
+| Nodejs doesnot have any access to window object and web API's, it uses a global object with some predefined methods and properties | Browser javascript can access the window object and web API's of web browser                         |
+| Nodejs environment built by using chromes V8 engine and libuv library                                                              | Browser environment are like V8 engine, spider monkey, chakra, js core are uses in different browser |
+
+## History of Nodejs
+
+- Nodejs initially developed by `Ryan Dahl` in the year of 2009 who wanted to create an environment to run the javascript in the server side.
+- In 2010 they release npm(Node Package Manager) which allows the developers to install the javascript library and packages in CLI(command line interface)
+- In 2015 nodejs foundation was istablished which is a non profit organization that promotes the growth and adoption of Nodejs.
+- The latest stable version of nodejs is v20.17.0
+
+## Feature of Nodejs
+
+Nodejs has gained immense popularity among developers for its ability to handle server side operations efficiently and effectively. Built on Chrome v8 javascript engine, Nodejs is designed to build scalable and high performance application.
+
+1. Nodejs supports asynchronous input and output and event driven architecture.
+2. Nodejs uses single threaded mechanism.
+3. Scalability
+4. Fast Performance
+5. Real-Time Application which supports micro-services
+6. Rich Ecosystem and NPM library
+7. Community Support
+8. Cross-Platform Compatibility
+9. RESTful APIs and Real-Time Communication
+10. No Buffering
+
+### REPL
+
+REPL stands for _`Read Evaluate Print Loop`_ and it is a programming language environment (basically a console window) that takes single expression as user input and returns the result back to the console after execution.
