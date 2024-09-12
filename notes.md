@@ -103,4 +103,19 @@ Nodejs has gained immense popularity among developers for its ability to handle 
 
 ### REPL
 
-REPL stands for _`Read Evaluate Print Loop`_ and it is a programming language environment (basically a console window) that takes single expression as user input and returns the result back to the console after execution.
+- REPL stands for _`Read Evaluate Print Loop`_ and it is a programming language environment (basically a console window) that takes single expression as user input and returns the result back to the console after execution.
+- The REPL feature of nodejs is very useful to experiment and debug the javascript code in window console.
+- `Read`: Read feature takes the input from users and stores them in memory.
+- `Eval`: It takes the input and evaluate the data according to the users experision.
+- `Print`: It prints the result.
+- `Loop`: It loops the above commands till the user does not close the repl environment.
+
+Some commands of repl:-
+
+1. `.help`: shows the dot commands help
+2. `.editor`: enables editor mode to write multiline javascript code with ease. Once you are in thsi mode enter ctrl+D to run the code you wrote.
+3. `.break`: when inputing a multiline expression entering the .break command will abort further input. Same as pressing ctrl+C.
+4. `.clear`: resets the REPL context to an empty object and clears any multi-line expression currently bein input.
+5. `.load`: loads a javascript file relative to the current working directory
+6. `.save`: saves all you entered in the REPL session to a file (specify the filename)\
+   <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*U_zyHnKdlvjCdAQkoh0uuQ.png" width="900px">
