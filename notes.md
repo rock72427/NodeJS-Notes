@@ -224,3 +224,5 @@ const OS = require('os');
 fs.writeFile(path, data, (error) => { });
 fs.writeFileSync(path, data);
 ```
+
+### Read
