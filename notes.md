@@ -119,3 +119,67 @@ Some commands of repl:-
 5. `.load`: loads a javascript file relative to the current working directory
 6. `.save`: saves all you entered in the REPL session to a file (specify the filename)\
    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*U_zyHnKdlvjCdAQkoh0uuQ.png" width="900px">
+
+## V8 Engine
+
+- V8 Engine is the fundamental part of Nodejs architecutre. It identify the javascript code and convert it to c++ code which can be understood by machines.
+
+## Libuv
+
+- Libuv is an open source library that is strongly focused on asynchronous I/O. This library provides access to Nodejs as a computer operating system file system and Networking.
+
+## Event Queue
+
+- Event queue to the incomming client request and pass them to the event loop in sequentially.
+
+## Event Loop
+
+- The event loop is responsible for handling small tasks such as executing callback functions or network I/O. Those are non blocking tasks that do not block the main thread.
+
+## Thread Pool
+
+- Thread pool consists of all the threads available for carrying out some tasks that might be required to fulfill client requests.
+
+## Modules
+
+<img src="https://i.ibb.co/ygq6N63/2024-09-13-11-44-40-AI-Eraser.png" width="900px">
+
+- Modules are some pic of javascript code store in separate files to split out a complex javascript program into manageable code.
+- Modules are use to increase the code readibility and can be use multiple times in separate files.
+- By default Nodejs supports common javascript modules.
+- Nodejs works with 3 types modules:-
+
+1. Custom Modules (user defined)
+2. Core Modules (inbuilt Modules)
+3. Third Party Modules (npm library packages)
+
+### Custom Modules
+
+- The modules which are created by the users for code seperation and reusability purpose and called as custom modules.
+- For sending a variable or function from one file to another we are using `module.exports` for receiving `require()` which takes the file path as a argument.
+
+#### first.js
+
+```
+function add(a, b) {
+  return a + b
+}
+function sub(a, b) {
+  return a - b
+}
+module.exports = {add, sub}
+```
+
+#### second.js
+
+```
+const {add, sub} = require("./first")
+let x = 10
+let y = 20
+
+let result = add(x, y)
+console.log(result);
+
+let result1 = sub(x, y)
+console.log(result1);
+```
