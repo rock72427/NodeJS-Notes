@@ -183,3 +183,44 @@ console.log(result);
 let result1 = sub(x, y)
 console.log(result1);
 ```
+
+### Core Modules
+
+- Nodejs environment provides some inbuilt libraries to work on different functionalities in a server application those are known as core modules.
+
+#### Examples
+
+- OS
+- Path
+- File System
+- HTTP
+- HTTPS
+- event
+- stream
+- crypto
+
+### OS Module
+
+- OS module use to get the information of the operating system and local machine where the server is created.
+
+#### use
+
+```
+const OS = require('os');
+```
+
+### Path Module
+
+- It gets the information about a given path and use to provide dynamic path in the server application.
+
+### FS Module
+
+- FS module use to handle the files inside a node application it performs the `CURD` operation to the files and folders.
+- Every functionalities of FS modules comes with both synchronous and asynchronous methods.
+
+#### Syntax
+
+```
+fs.writeFile(path, data, (error) => { });
+fs.writeFileSync(path, data);
+```
