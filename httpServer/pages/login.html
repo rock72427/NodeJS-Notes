@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h2><a href="/">JSpider</a></h2>
+        <div class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </div>
+        <button><a href="/login">Login</a></button>
+      </div>
+    </nav>
+    <section>
+      <h2>Fill the form for registration</h2>
+      <div class="main">
+        <form id="login-form">
+          <table>
+            <tr>
+              <td><label for="email">Email</label></td>
+              <td><input type="email" id="email" /></td>
+            </tr>
+            <tr>
+              <td><label for="password">Password</label></td>
+              <td><input type="password" id="password" /></td>
+            </tr>
+          </table>
+
+          <p>
+            Dont have an account. Create an Account
+            <a style="color: #000; text-decoration: underline" href="/signup"
+              >signup</a
+            >
+          </p>
+          <button type="submit" style="color: #fff">Submit</button>
+        </form>
+      </div>
+    </section>
+    <script>
+      let loginForm = document.getElementById("login-form");
+      let data = {};
+      loginForm.addEventListener("input", (event) => {
+        if (event.target.id === "email") {
+          data.email = event.target.value;
+        } else if (event.target.id === "password") {
+          data.password = event.target.value;
+        }
+      });
+
+      loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (data.email && data.password) {
+          fetch("/data", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
+          loginForm.reset();
+        } else {
+          alert("Please provide all fields");
+        }
+      });
+    </script>
+  </body>
+</html>

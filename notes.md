@@ -225,4 +225,103 @@ fs.writeFile(path, data, (error) => { });
 fs.writeFileSync(path, data);
 ```
 
-### Read
+## Events Module
+
+- Events module alows us to assign event handlers to your own events with the EventEmitter object.
+- EventEmitter is a powerful feature in Nodejs that enables asynchronous and event driven programming.
+
+## http module
+
+- An inbuilt nodejs module used to create http servers.
+- The server handles the requests of the client system and returns the response to them.
+- A node servers works with rest APIs and manages the web applications.
+
+#### use
+
+```
+const http = require('http');
+
+const server = http.createServer((request, response) => {
+  // server logic
+});
+
+server.listen(PORT, hostname, () => {});
+```
+
+### Step -1
+
+- Create server folder
+
+### Step - 2
+
+- cd folderName
+
+### Step - 3
+
+- install package.json file
+
+```
+npm init (manual details)
+
+(or)
+
+npm init -y (automatic default details)
+```
+
+### Step - 4
+
+- install nodemon library
+
+```
+npm i nodemon
+```
+
+### Step - 5
+
+- create server root file
+
+```
+index.js (default root name)
+```
+
+### Step - 6
+
+- create http server
+
+```
+const http = require("http");
+
+const app = htttp.createServer((req, res) => {
+
+});
+
+app.listen(PORT);
+```
+
+### Step - 7
+
+- run the server file
+
+```
+nodemon index.js
+```
+
+### Step - 7 (bonus)
+
+- run the server
+- set the scripts in package.json file
+
+```
+"start": "node index";
+"dev": "nodemon index";
+```
+
+- run the commands
+
+```
+npm start (node server)
+
+(or)
+
+npm run dev (nodemon server)
+```

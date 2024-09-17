@@ -14,7 +14,7 @@ const fs = require("fs");
 // });
 // console.log("end");
 
-// ====================read====================
+// ====================Read====================
 // sync
 // let data = fs.readFileSync("./demo.txt");
 // console.log(data); // <Buffer 48 45 4c 4c 4f 20 57 4f 52 4c 44 20 21 21 21>
@@ -29,12 +29,67 @@ const fs = require("fs");
 //   else console.log(data);
 // });
 
-// ====================delete====================
+// ====================Delete====================
 // sync
 // fs.unlinkSync("./demo.txt");
 
 // async
-fs.unlink("./virat.txt", (error) => {
-  if (error) console.log(error);
-  else console.log("file deleted");
-});
+// fs.unlink("./virat.txt", (error) => {
+//   if (error) console.log(error);
+//   else console.log("file deleted");
+// });
+
+// ====================Update====================
+// fs.writeFileSync("./demo1.txt", "Hello");
+
+// sync
+// fs.appendFileSync("./demo1.txt", " World!!!");
+
+// async
+// fs.appendFile("./demo1.txt", "HAPPY ONAM", (error) => {
+//   if (error) console.log(error);
+//   else console.log("data updated");
+// });
+
+// ====================Rename====================
+// sync
+// fs.renameSync("./demo1.txt", "./demo2.txt");
+
+// async
+// fs.rename("./demo2.txt", "./demo.txt", (error) => {
+//   if (error) console.log(error);
+//   else console.log("file renamed");
+// });
+
+// ====================Copy====================
+// sync
+// fs.linkSync("./demo.txt", "./link1.txt");
+
+// async
+// fs.link("./link1.txt", "./link2.txt", (error) => {
+//   if (error) console.log(error);
+//   else console.log("file copied");
+// });
+
+// calling by value
+// sync
+// fs.copyFileSync("./demo.txt", "./copy.txt");
+
+// async
+// fs.copyFile("./demo.txt", "./copy1.txt", (error) => {
+//   if (error) console.log(error);
+//   else console.log("file copied");
+// });
+
+// ====================Copy====================
+// create
+// fs.mkdir("./myFolder", (error) => {
+//   if (error) console.log(error);
+//   else console.log("folder created");
+// });
+
+// delete
+// fs.rmdir("./myFolder", (error) => {
+//   if (error) console.log(error);
+//   else console.log("folder deleted");
+// });
